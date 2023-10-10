@@ -43,4 +43,8 @@ Server akan berjalan pada `http://localhost:3000`.
 
 Anda dapat menggunakan Postman untuk mengakses API ini. Import file `MINI-WALLET.postman_collection.json` ke Postman untuk mendapatkan akses ke koleksi endpoint API yang telah disiapkan.
 
+## Akses
+
+Anda juga dapat mengakses API melalui endpoint berikut: https://mini-wallet-ridl.vercel.app/
+
 Semoga informasi ini membantu!
