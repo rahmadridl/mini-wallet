@@ -1,0 +1,125 @@
+const DataTypes = require("sequelize");
+const db = require("../database.js");
+
+const attributes = {
+  id: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    defaultValue: null,
+    comment: null,
+    primaryKey: true,
+    field: "id",
+    autoIncrement: true,
+  },
+  kode_transaksi: {
+    type: DataTypes.CHAR(100),
+    allowNull: true,
+    defaultValue: null,
+    comment: null,
+    primaryKey: false,
+    field: "kode_transaksi",
+    autoIncrement: false,
+  },
+  owned_by: {
+    type: DataTypes.CHAR(100),
+    allowNull: true,
+    defaultValue: null,
+    comment: null,
+    primaryKey: false,
+    field: "owned_by",
+    autoIncrement: false,
+  },
+  deposited_by: {
+    type: DataTypes.CHAR(100),
+    allowNull: true,
+    defaultValue: null,
+    comment: null,
+    primaryKey: false,
+    field: "deposited_by",
+    autoIncrement: false,
+  },
+  withdrawn_by: {
+    type: DataTypes.CHAR(100),
+    allowNull: true,
+    defaultValue: null,
+    comment: null,
+    primaryKey: false,
+    field: "withdrawn_by",
+    autoIncrement: false,
+  },
+  status: {
+    type: DataTypes.CHAR(100),
+    allowNull: true,
+    defaultValue: null,
+    comment: null,
+    primaryKey: false,
+    field: "status",
+    autoIncrement: false,
+  },
+  type: {
+    type: DataTypes.CHAR(100),
+    allowNull: true,
+    defaultValue: null,
+    comment: null,
+    primaryKey: false,
+    field: "type",
+    autoIncrement: false,
+  },
+  reference_id: {
+    type: DataTypes.CHAR(100),
+    allowNull: true,
+    defaultValue: null,
+    comment: null,
+    primaryKey: false,
+    field: "reference_id",
+    autoIncrement: false,
+  },
+  amount: {
+    type: DataTypes.FLOAT,
+    allowNull: true,
+    defaultValue: null,
+    comment: null,
+    primaryKey: false,
+    field: "amount",
+    autoIncrement: false,
+  },
+  deposited_at: {
+    type: DataTypes.DATE,
+    allowNull: true,
+    defaultValue: null,
+    comment: null,
+    primaryKey: false,
+    field: "deposited_at",
+    autoIncrement: false,
+  },
+  withdrawn_at: {
+    type: DataTypes.DATE,
+    allowNull: true,
+    defaultValue: null,
+    comment: null,
+    primaryKey: false,
+    field: "withdrawn_at",
+    autoIncrement: false,
+  },
+  customer_id: {
+    type: DataTypes.INTEGER,
+    allowNull: true,
+    defaultValue: null,
+    comment: null,
+    primaryKey: false,
+    field: "customer_id",
+    autoIncrement: false,
+  },
+};
+
+const options = {
+  freezeTableName: true,
+  timestamps: false,
+  tableName: "transaksi",
+  comment: "",
+  indexes: [],
+};
+
+const transaksi = db.define("transaksi", attributes, options);
+
+module.exports = transaksi;
